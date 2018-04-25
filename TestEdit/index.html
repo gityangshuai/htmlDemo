@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+	</head>
+	<body>
+		<button type="button" id="add">增加</button>
+		<table id="addStat">
+			<thead>
+				<tr>
+					<th>文本框</th>
+					<th>操作</th>
+				</tr>
+				<tr>
+					<td><input type="text" readonly="readonly" id="begin" /></td>
+					<td></td>
+				</tr>
+			</thead>
+			<tbody id="tbody">
+				
+			</tbody>
+			<tfoot>
+				<tr>
+					<td><input type="text" readonly="readonly" id="end" /></td>
+					<td></td>
+				</tr>
+			</tfoot>
+		</table>
+		<button type="button" id="produce">生成</button>
+		<script type="text/javascript">
+			$(function(){
+				$("#begin").val("上海");
+				$("#end").val("南京");
+				
+				$("#add").on("click",function() {
+					var tbody = $("#tbody");
+					var tr = document.createElement("tr");
+					$(tr).appendTo(tbody);
+					
+					var td1 = document.createElement("td");
+					$(td1).html("<input type='text' />").appendTo(tr);
+					var td2 = document.createElement("td");
+					$(td2).appendTo(tr);
+					
+					var btn = document.createElement("button");
+					$(btn).html("删除").on("click",function() {
+						$(tr).remove();
+					}).appendTo(td2);
+					
+				});
+				
+				$("#produce").on("click", function(){
+					var alt = "";
+					$("#addStat input[type='text']").each(function(){
+				    	alt += $(this).val()+"-->";
+					});
+					var ss = alt.substring(0,alt.length-3);
+					alert(ss);
+				});
+			});
+		</script>
+	</body>
+</html>

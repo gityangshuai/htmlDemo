@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+		<title></title>
+		<style>  
+			#drop{  
+			  border:2px dashed #bbb;  
+			  -moz-border-radius:5px;  
+			  -webkit-border-radius:5px;  
+			  border-radius:5px;  
+			  padding:25px;  
+			  text-align:center;  
+			  font:20pt bold,"Vollkorn";color:#bbb  
+			}  
+			#b64data{  
+			  width:100%;  
+			}  
+			a { text-decoration: none }  
+			button{}  
+		</style> 
+	</head>
+	<body>
+		<pre>  
+		<input type="file" name="xlfile" id="xlf">  
+		<button type="button" class="btn btn-danger"><a href="Techrecord.html">返回</a></button>  
+		<input type="checkbox" name="useworker" checked="" style="display: none;">  
+		<input type="checkbox" name="xferable" checked="" style="display: none;">  
+		<input type="checkbox" name="userabs" checked="" style="display: none;">  
+		</pre>  
+		<button class="submit_all">提交</button>  
+		<pre id="out"></pre>  
+		<br>  
+		  
+		<script type="text/javascript" src="js/jquery.min.js"></script>  
+		<!--<script type="text/javascript" src="js/common.js"></script>--><!--//这里主要封装了一下方法，可以忽略，主要使用到以下几个js-->
+		<script type="text/javascript" src="js/ga.js" ></script>
+		<script type="text/javascript" src="js/shim.min.js"></script>  
+		<script type="text/javascript" src="js/xlsx.full.min.js"></script>  
+		<script type="text/javascript" src='js/myexcel.js'></script> 
+	</body>
+</html>

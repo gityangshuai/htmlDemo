@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!--HTML 中的所有标题标签，<h1> 到 <h6> 均可使用。另外，还提供了 .h1 到 .h6 类，为的是给内联（inline）属性的  
+            文本赋予标题的样式。在标题内还可以包含 <small> 标签或赋予 .small 类的元素，可以用来标记副标题-->   
+        <h1>h1. Bootstrap heading <small>Secondary text</small></h1>  
+        <span class="h1">行内元素具有h1的class，就是不一样</span>  
+        <!--Bootstrap 将全局 font-size 设置为 14px，line-height 设置为 1.428。这些属性直接赋予 <body> 元素和所有段落元素-->  
+        <p>我被设置了等于 1/2 行高（即 10px）的底部外边距margin</p>  
+        <p>我上面和我一样的段落元素设置了底部外边距（margin）</p>  
+        <p class="lead">我加了lead的class样式，我会突出显示</p>  
+        <p>Bootstrap<mark>教程</mark></p>   
+        <del>对于被删除的文本使用</del><br/>  
+        <s>对于没用的文本使用</s><br />  
+        <u>为文本添加下划线</u>  
+        <!--通过文本对齐类，可以简单方便的将文字重新对齐-->  
+        <p class="text-left">Left aligned text.</p>  
+        <p class="text-center">Center aligned text.</p>  
+        <p class="text-right">Right aligned text.</p>  
+        <p class="text-justify">Justified text.</p>  
+        <p class="text-nowrap">No wrap text.</p>  
+        <!--通过这几个类可以改变文本的大小写，即大小写转换-->  
+        <p class="text-lowercase">Lowercased text.</p>  
+        <p class="text-uppercase">Uppercased text.</p>  
+        <p class="text-capitalize">Capitalized text.</p>          
+        <!--移除了默认的 list-style 样式和左侧外边距的一组元素（只针对直接子元素）。  
+        这是针对直接子元素的，你需要对所有嵌套的列表都添加这个类才能具有同样的样式。-->  
+        <ul class="list-unstyled">  
+            <li>列表类</li>  
+            <li>列表类</li>  
+            <li>列表类</li>  
+        </ul>  
+        <!--通过设置 display: inline-block; 并添加少量的内补（padding），将所有元素放置于同一行-->  
+        <ul class="list-inline">  
+            <li>同一行的列表</li>  
+            <li>同一行的列表</li>  
+            <li>同一行的列表</li>  
+        </ul>  
+        
+        
+        <!----------------------------------------------------------------->
+        <!--单独的表单控件会被自动赋予一些全局样式。  
+        所有设置了 .form-control 类的 <input>、<textarea> 和 <select> 元素  
+        都将被默认设置宽度属性为 width: 100%;。   
+        将 label 元素和前面提到的控件包裹在 .form-group 中可以获得最好的排列-->  
+            <form>  
+                  <div class="form-group">  
+                    <label for="exampleInputEmail1">Email address</label>  
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">  
+                  </div>  
+                  <div class="form-group">  
+                    <label for="exampleInputPassword1">Password</label>  
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">  
+                  </div>  
+                  <div class="form-group">  
+                    <label for="exampleInputFile">File input</label>  
+                    <input type="file" id="exampleInputFile">  
+                    <p class="help-block">Example block-level help text here.</p>  
+                  </div>  
+                  <div class="checkbox">  
+                    <label>  
+                      <input type="checkbox"> Check me out  
+                    </label>  
+                  </div>  
+                  <button type="submit" class="btn btn-default">Submit</button>  
+            </form>     
+            <!--内联表单-->  
+            <!--为 <form> 元素添加 .form-inline 类可使其内容左对齐并且表现为 inline-block 级别的控件-->  
+            <form class="form-inline">  
+              <div class="form-group">  
+                <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>  
+                <div class="input-group">  
+                  <div class="input-group-addon">$</div>  
+                  <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">  
+                  <div class="input-group-addon">.00</div>  
+                </div>  
+              </div>  
+              <button type="submit" class="btn btn-primary">Transfer cash</button>  
+             </form><br /><br />  
+            <!--通过为表单添加 .form-horizontal 类，并联合使用 Bootstrap 预置的栅格类，  
+                                         可以将 label 标签和控件组水平并排布局-->  
+         <form class="form-horizontal">  
+                  <div class="form-group">  
+                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>  
+                    <div class="col-sm-10">  
+                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">  
+                    </div>  
+                  </div>  
+                  <div class="form-group">  
+                    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>  
+                    <div class="col-sm-10">  
+                      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">  
+                    </div>  
+                  </div>  
+                  <div class="form-group">  
+                    <div class="col-sm-offset-2 col-sm-10">  
+                      <div class="checkbox">  
+                        <label>  
+                          <input type="checkbox"> Remember me  
+                        </label>  
+                      </div>  
+                    </div>  
+                  </div>  
+                  <div class="form-group">  
+                    <div class="col-sm-offset-2 col-sm-10">  
+                      <button type="submit" class="btn btn-default">Sign in</button>  
+                    </div>  
+                  </div>  
+        </form>  
+        <!--包括大部分表单控件、文本输入域控件，还支持所有 HTML5 类型的输入控件：  
+            text、password、datetime、datetime-local、date、month  
+           time、week、number、email、url、search、tel 和 color-->  
+        <input type="text" class="form-control" placeholder="Text input"><br /><br />  
+        <textarea class="form-control" rows="3"></textarea>  
+        <!--多选框（checkbox）用于选择列表中的一个或多个选项，而单选框（radio）用于从多个选项中只选择一个-->  
+        <!--通过将 .checkbox-inline 或 .radio-inline 类应用到一系列的多选框（checkbox）  
+                   或单选框（radio）控件上，可以使这些控件排列在一行-->  
+            <label class="checkbox-inline">  
+              <input type="checkbox" id="inlineCheckbox1" value="option1"> 乒乓球  
+            </label>  
+            <label class="checkbox-inline">  
+              <input type="checkbox" id="inlineCheckbox2" value="option2"> 篮球  
+            </label>  
+            <label class="checkbox-inline">  
+              <input type="checkbox" id="inlineCheckbox3" value="option3"> 足球  
+            </label>  
+            <br />  
+            <label class="radio-inline">  
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1  
+            </label>  
+            <label class="radio-inline">  
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2  
+            </label>  
+            <label class="radio-inline">  
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3  
+            </label>  
+    <!----------------------------------------------------------------------->
+    <h1>按钮：</h1>  
+            <!--为 <a>、<button> 或 <input> 元素添加按钮类（button class）  
+                 也可以设置按钮的预定义样式。即可使用 Bootstrap 提供的样式-->  
+            <a class="btn btn-default" href="#" role="button">Link</a>  
+            <button class="btn btn-primary" type="submit">Button</button>  
+            <input class="btn btn-success" type="button" value="成功success">  
+            <input class="btn btn-info" type="submit" value="info">  
+            <button class="btn btn-danger">danger</button>  
+            <br /><br />  
+            <!--需要让按钮具有不同尺寸吗？使用 .btn-lg、.btn-sm 或 .btn-xs 就可以获得不同尺寸的按钮-->  
+            <p>  
+              <button type="button" class="btn btn-primary btn-lg">（大按钮）Large button</button>  
+              <button type="button" class="btn btn-default btn-lg">（大按钮）Large button</button>  
+            </p>  
+            <p>  
+              <button type="button" class="btn btn-primary">（默认尺寸）Default button</button>  
+              <button type="button" class="btn btn-default">（默认尺寸）Default button</button>  
+            </p>  
+            <p>  
+              <button type="button" class="btn btn-primary btn-sm">（小按钮）Small button</button>  
+              <button type="button" class="btn btn-default btn-sm">（小按钮）Small button</button>  
+            </p>  
+            <p>  
+              <button type="button" class="btn btn-primary btn-xs">（超小尺寸）Extra small button</button>  
+              <button type="button" class="btn btn-default btn-xs">（超小尺寸）Extra small button</button>  
+            </p>  
+            <br />  
+            <p>通过给按钮添加 .btn-block 类可以将其拉伸至父元素100%的宽度，而且按钮也变为了块级（block）元素 如下：</p>  
+            <p>active设置为激活状态，disabled设置为禁用状态</p>  
+            <button type="button" class="btn btn-primary btn-lg btn-block active">（块级元素）Block level button</button>  
+            <button type="button" class="btn btn-default btn-lg btn-block disabled">（块级元素）Block level button</button>  
+            
+            <!------------------------ 图片 ------------------------->
+            <h1>图片：</h1>  
+            <!--在 Bootstrap 版本 3 中，通过为图片添加 .img-responsive 类可以让图片支持响应式布局  
+            如果需要让使用了 .img-responsive 类的图片水平居中，请使用 .center-block 类-->  
+            <img class="img-responsive center-block" src="img/QQ截图20170318224111.png"/>  
+            <img class="img-rounded center-block" src="img/QQ截图20170318224111.png"/>  
+            <img class="img-circle center-block" src="img/QQ截图20170318224111.png"/>  
+            <img class="img-thumbnail center-block" src="img/QQ截图20170318224111.png"/>  
+            
+            
+            
+            <h1>辅助类:</h1>  
+                <p>1.文本颜色：</p>  
+                <p class="text-muted">我是什么颜色</p>  
+                <p class="text-primary">我是什么颜色</p>  
+                <p class="text-success">我是什么颜色</p>  
+                <p class="text-info">我是什么颜色</p>  
+                <p class="text-warning">我是什么颜色</p>  
+                <p class="text-danger">我是什么颜色</p>  
+                <p>2.背景颜色：</p>  
+                <p class="bg-primary">我是什么背景颜色</p>  
+                <p class="bg-success">我是什么背景颜色</p>  
+                <p class="bg-info">我是什么背景颜色</p>  
+                <p class="bg-warning">我是什么背景颜色</p>  
+                <p class="bg-danger">我是什么背景颜色</p>  
+                <p><button type="button" class="close" ><span aria-hidden="true">×</span></button></p>  
+                三角符号：<span class="caret"></span><br /><br />  
+                <!--通过添加一个类，可以将任意元素向左或向右浮动  
+                但是排列导航条中的组件时可以使用这些工具类：.navbar-left 或 .navbar-right  
+                -->  
+                <!--通过为父元素添加 .clearfix 类可以很容易地清除浮动-->  
+                <div class="clearfix">  
+                <div class="pull-left">我是左浮动哦</div>  
+                <div class="pull-right">我是右浮动哦</div>  
+                </div><br /><br />  
+                <!--.show 和 .hidden 类可以强制任意元素显示或隐藏-->   
+                <div class="show">我是显示的</div>  
+                <div class="hidden">我是隐藏的</div>  
+        
+	</body>
+</html>
